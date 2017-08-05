@@ -1,3 +1,23 @@
-<p>
-  navbar works!
-</p>
+<div class="row">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand">{{ title }}</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav" *ngIf="(user|async)?.uid">
+          <li><a routerLink="/gallery">Image Gallery</a></li>
+          <li><a routerLink="/upload">Upload</a></li>
+        </ul>
+        <ul class="nav navbar-nav account">
+          <li *ngIf="!(user|async)?.uid">
+            <a routerLink="/login">Log In</a>
+          </li>
+          <li *ngIf="(user|async)?.uid">
+            <a routerLink="#" (click)="logOut()">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
