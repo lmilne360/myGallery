@@ -10,7 +10,7 @@ import * as firebase from 'firebase/app';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  title = 'Gallery';
+  title = 'My Gallery';
   user: Observable<firebase.User>;
   constructor(private authService: AuthenticationService, private router: Router) { }
 
@@ -20,10 +20,9 @@ export class NavbarComponent implements OnInit {
   }
 
   logOut() {
-    debugger
     this.authService.logout()
     .then(onResolve => this.router.navigate(['gallery']), onReject =>
-  console.log("Rejected"));
+  console.log('Rejected'));
   }
 
 }

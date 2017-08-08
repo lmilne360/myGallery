@@ -6,7 +6,7 @@ import { UploadComponent } from './app/upload/upload.component';
 import { AuthenticationGuard } from './app/services/authentication-guard.service';
 
 export const appRoutes: Routes = [
-  {path: 'gallery', component: GalleryComponent, canActivate: [AuthenticationGuard]},
+  {path: 'gallery', component: GalleryComponent},
   {path: 'upload', component: UploadComponent, canActivate: [AuthenticationGuard]},
   {path: 'image/:id', component: ImageDetailComponent, canActivate: [AuthenticationGuard]},
   {path: 'login', component: LoginComponent },

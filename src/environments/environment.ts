@@ -10,7 +10,7 @@ export const environment = {
     authDomain: 'mygallery-a6948.firebaseapp.com',
     databaseURL: 'https://mygallery-a6948.firebaseio.com',
     projectId: 'mygallery-a6948',
-    storageBucket: '',
+     storageBucket: 'mygallery-a6948.appspot.com',
     messagingSenderId: '738343635824'
   }
 };

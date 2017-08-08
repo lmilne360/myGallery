@@ -36,7 +36,7 @@ import { appRoutes } from '../routes';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: true}),
+    RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule
@@ -44,6 +44,7 @@ import { appRoutes } from '../routes';
   providers: [AuthenticationGuard,
     AuthenticationService,
     ImageService,
+    UploadService
     ],
   bootstrap: [AppComponent]
 })

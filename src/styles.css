@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto ', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+  background-color: #F9F9F9;
+}
+
+.main-content {
+  padding-top: 60px;
+  color: #333
+}
+
+h1 h2 h3 h4 h5 {
+  font-family: 'Cabin', sans-serif;
+  color: #555;
+}

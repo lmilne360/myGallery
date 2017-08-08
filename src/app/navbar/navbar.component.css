@@ -1,0 +1,24 @@
+
+.container{
+  margin: 0 auto;
+  width: 50%;
+}
+.navbar {
+  padding: 20px 0;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  background-color: #3e586d;
+  overflow: hidden;
+  
+}
+.brand,
+.nav{
+  display: inline-block;
+  margin: 0;
+}
+a{text-decoration: none;color: whitesmoke;}
+a:hover{text-decoration: underline;}
+
+.nav {list-style: none;}
+.nav li{ display: inline-block;}
