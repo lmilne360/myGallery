@@ -3,6 +3,8 @@ import { UploadService } from '../services/upload.service';
 import { Upload } from '../models/upload.model';
 import * as _ from 'lodash';
 
+import {MdProgressBarModule} from '@angular/material';
+
 @Component({
   selector: 'app-upload',
   templateUrl: './upload.component.html',

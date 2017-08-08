@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -21,6 +22,9 @@ import { AuthenticationGuard } from './services/authentication-guard.service';
 import { ImageService} from './services/image.service';
 import { AuthenticationService} from './services/authentication.service';
 
+// Material modules
+import {MdProgressBarModule} from '@angular/material'
+
 // Routes
 import { appRoutes } from '../routes';
 
@@ -35,11 +39,13 @@ import { appRoutes } from '../routes';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    MdProgressBarModule
   ],
   providers: [AuthenticationGuard,
     AuthenticationService,
