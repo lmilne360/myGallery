@@ -3,7 +3,7 @@
   <div class="container">
 
     <div class="brand">
-      <a href="#" class="navbar-brand">{{ title }}</a>
+      <a routerLink="/gallery" class="navbar-brand">{{ title }}</a>
     </div>
 
     <ul class="nav" *ngIf="(user|async)?.uid">
