@@ -12,6 +12,8 @@ import * as firebase from 'firebase/app';
 export class NavbarComponent implements OnInit {
   title = 'My Gallery';
   user: Observable<firebase.User>;
+  active = false; // class for ul and button
+
   constructor(private authService: AuthenticationService, private router: Router) { }
 
   ngOnInit() {
@@ -23,6 +25,13 @@ export class NavbarComponent implements OnInit {
     this.authService.logout()
     .then(onResolve => this.router.navigate(['gallery']), onReject =>
   console.log('Rejected'));
+  }
+
+  navToggle(e) {
+    this.active = !this.active;
+    const toggleButton = e.target;
+
+    toggleButton.classList.toggle('active')
   }
 
 }

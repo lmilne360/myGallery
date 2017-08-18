@@ -6,11 +6,17 @@
       <a routerLink="/gallery" class="navbar-brand">{{ title }}</a>
     </div>
 
-    <ul class="nav" *ngIf="(user|async)?.uid">
+    <div id="nav-toggle" (click)="navToggle($event)" [class.active] ="active">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+
+    <ul class="nav" *ngIf="(user|async)?.uid" [class.active] ="active">
       <li><a routerLink="/gallery">Gallery</a></li>
       <li><a routerLink="/upload">Upload</a></li>
     </ul>
-    <ul class="nav account">
+    <ul class="nav account" [class.active] ="active">
       <li *ngIf="!(user|async)?.uid">
         <a routerLink="/login">Log In</a>
       </li>

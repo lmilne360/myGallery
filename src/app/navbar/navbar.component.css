@@ -1,6 +1,8 @@
 .container {
   margin: 0 auto;
   width: 50%;
+  display: relative;
+  height: auto;
 }
 
 .navbar {
@@ -33,12 +35,74 @@ a:hover {
   text-decoration: underline;
 }
 
-.nav {
-  list-style: none;
-}
 
 .nav li {
   display: inline-block;
   margin: 0 12px;
 }
-ul.account{position: absolute; right: 10px;}
+
+ul.account {
+  position: absolute;
+  right: 0;
+}
+
+#nav-toggle {
+  display: none;
+  width: 50px
+}
+
+#nav-toggle:hover {
+  cursor: pointer;
+}
+
+#nav-toggle .line {
+  pointer-events: none;
+  width: auto;
+  height: 5px;
+  background-color: #ecf0f1;
+  display: block;
+  margin: 8px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+#nav-toggle.active .line:nth-child(1) {
+  -webkit-transform: translateY(13px);
+  -ms-transform: translateY(13px);
+  -o-transform: translateY(13px);
+  transform: translateY(13px);
+}
+
+#nav-toggle.active .line:nth-child(3) {
+  -webkit-transform: translateY(-13px);
+  -ms-transform: translateY(-13px);
+  -o-transform: translateY(-13px);
+  transform: translateY(-13px);
+}
+
+@media (max-width: 768px) {
+  .brand{
+    display: block;
+    text-align: center;
+  }
+  #nav-toggle {
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: 0;
+    margin: auto 1em;
+    z-index: 99;
+  }
+  ul.nav {
+    display: none;
+  }
+  ul.nav.active {
+    display: block;
+    position: relative;
+    padding: 0;
+  }
+  ul.nav.active li {
+    text-align: center;
+    display: block;
+    float: none;
+  }
+}
