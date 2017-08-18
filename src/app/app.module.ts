@@ -23,7 +23,7 @@ import { ImageService} from './services/image.service';
 import { AuthenticationService} from './services/authentication.service';
 
 // Material modules
-import {MdProgressBarModule} from '@angular/material'
+import {MdProgressBarModule, MdInputModule} from '@angular/material'
 
 // Routes
 import { appRoutes } from '../routes';
@@ -45,7 +45,8 @@ import { appRoutes } from '../routes';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    MdProgressBarModule
+    MdProgressBarModule,
+    MdInputModule
   ],
   providers: [AuthenticationGuard,
     AuthenticationService,

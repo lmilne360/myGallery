@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
 import { Router } from '@angular/router';
+import {MdInputModule} from '@angular/material'
 
 @Component({
   selector: 'app-login',
