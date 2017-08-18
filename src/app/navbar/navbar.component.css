@@ -1,8 +1,8 @@
-
-.container{
+.container {
   margin: 0 auto;
   width: 50%;
 }
+
 .navbar {
   padding: 20px 0;
   margin-bottom: 20px;
@@ -10,15 +10,35 @@
   height: auto;
   background-color: #3e586d;
   overflow: hidden;
-  
 }
+
 .brand,
-.nav{
+.nav {
   display: inline-block;
   margin: 0;
 }
-a{text-decoration: none;color: whitesmoke;}
-a:hover{text-decoration: underline;}
 
-.nav {list-style: none;}
-.nav li{ display: inline-block;}
+.navbar-brand {
+  font-family: 'Bungee', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: 'Cabin', sans-serif;
+  font-size: 18px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.nav {
+  list-style: none;
+}
+
+.nav li {
+  display: inline-block;
+  margin: 0 12px;
+}
+ul.account{position: absolute; right: 10px;}
