@@ -1,12 +1,32 @@
-ul {padding: 0; width: 1200px; margin: 20px auto;}
-li {display: inline;}
+.row {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  width: 100%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(308px, auto));
+  grid-auto-rows: minmax(208px, auto);
+  grid-gap: 10px;
+  height: auto;
+  justify-content: center;
+}
+
+li {
+  position: relative;
+  display: inline;
+}
 
 .tn {
   margin: 6px 6px;
   border: 4px solid #eee;
   box-shadow: #555 1px 1px 6px 1px;
   cursor: pointer;
-  width: 300px;
+  width: 308px;
+  height: 208px;
 }
 
 h2 {
