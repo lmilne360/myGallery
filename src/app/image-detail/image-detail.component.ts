@@ -9,7 +9,7 @@ import { GalleryImage } from '../models/galleryImage.model';
   styleUrls: ['./image-detail.component.css']
 })
 export class ImageDetailComponent implements OnInit {
-  private imageUrl = '';
+   imageUrl = '';
 
   constructor(private imageService: ImageService,
     private route: ActivatedRoute ) { }
