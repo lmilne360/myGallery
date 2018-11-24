@@ -23,7 +23,7 @@ import { ImageService} from './services/image.service';
 import { AuthenticationService} from './services/authentication.service';
 
 // Material modules
-import {MatProgressBarModule, MatInputModule} from '@angular/material'
+import {MatProgressBarModule, MatInputModule, MatCardModule} from '@angular/material'
 
 // Routes
 import { appRoutes } from '../routes';
@@ -46,7 +46,8 @@ import { appRoutes } from '../routes';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     MatProgressBarModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule
   ],
   providers: [AuthenticationGuard,
     AuthenticationService,
