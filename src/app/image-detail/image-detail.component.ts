@@ -2,7 +2,6 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 import { ImageService } from '../services/image.service';
 import { ActivatedRoute } from '@angular/router';
 import { GalleryImage } from '../models/galleryImage.model';
-import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-image-detail',
@@ -17,7 +16,7 @@ export class ImageDetailComponent implements OnInit {
 
     getImageUrl(key: string) {
       this.imageService.getImage(key)
-      .then(image => this.imageUrl = image.url)
+      .then((image: GalleryImage) => this.imageUrl = image.url)
     }
   ngOnInit() {
     this.getImageUrl(this.route.snapshot.params['id']);

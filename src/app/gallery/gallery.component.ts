@@ -15,7 +15,7 @@ export class GalleryComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     console.log('Gallery Loaded');
-    this.images = this.imageService.getImages();
+     this.images = this.imageService.getImages();
   }
 
   ngOnChanges() {

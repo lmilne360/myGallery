@@ -3,7 +3,7 @@ import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { GalleryImage } from '../models/galleryImage.model';
 import {  Upload} from '../models/upload.model';
-import * as firebase from 'firebase';
+import * as firebase from 'firebase/app';
 
 
 @Injectable()
