@@ -16,6 +16,7 @@
 
 
     <button  mat-stroked-button [disabled]="!loginForm.form.valid" type="submit" class="btn" (click)="signIn()">Sign In</button>
+    <button  mat-stroked-button  type="submit" class="btn" (click)="signInDemoUser()">Sign In as Guest</button>
     <p *ngIf="errorMsg" class="text-danger">{{errorMsg}} </p>
   </form>
 </div>

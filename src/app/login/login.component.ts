@@ -20,4 +20,10 @@ export class LoginComponent {
     .catch(error => this.errorMsg = error.message)
   }
 
+  signInDemoUser() {
+    this.authService.login({email: 'test@test.com', password: 'testing'})
+    .then(resolve => this.router.navigate(['gallery']))
+    .catch(error => this.errorMsg = error.message)
+  }
+
 }
