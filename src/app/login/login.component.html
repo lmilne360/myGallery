@@ -12,9 +12,10 @@
     <mat-form-field>
       <input matInput class="form-control" #passwordControl="ngModel" placeholder="Password" [(ngModel)]="password" name="password" maxlength="50"
         type="password" required>
-    </mat-form-field>
+    </mat-form-field> <br>
 
-    <button [disabled]="!loginForm.form.valid" type="submit" class="btn" (click)="signIn()">Sign In</button>
+
+    <button  mat-stroked-button [disabled]="!loginForm.form.valid" type="submit" class="btn" (click)="signIn()">Sign In</button>
     <p *ngIf="errorMsg" class="text-danger">{{errorMsg}} </p>
   </form>
 </div>
