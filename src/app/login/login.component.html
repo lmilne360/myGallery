@@ -3,18 +3,18 @@
     <h1 class="login-title">Log In</h1>
 
     <!-- Email input -->
-    <md-input-container>
-      <input mdInput class="form-control" #emailControl="ngModel" placeholder="Email" [(ngModel)]="email" name="email" maxlength="50" email
+    <mat-form-field>
+      <input matInput class="form-control" #emailControl="ngModel" placeholder="Email" [(ngModel)]="email" name="email" maxlength="50" email
         required>
-    </md-input-container> <br>
+    </mat-form-field> <br>
 
     <!-- Password input -->
-    <md-input-container>
-      <input mdInput class="form-control" #passwordControl="ngModel" placeholder="Password" [(ngModel)]="password" name="password" maxlength="50"
+    <mat-form-field>
+      <input matInput class="form-control" #passwordControl="ngModel" placeholder="Password" [(ngModel)]="password" name="password" maxlength="50"
         type="password" required>
-    </md-input-container>
+    </mat-form-field>
 
     <button [disabled]="!loginForm.form.valid" type="submit" class="btn" (click)="signIn()">Sign In</button>
-    <p *ngIf="msg" class="text-danger">{{msg}} </p>
+    <p *ngIf="errorMsg" class="text-danger">{{errorMsg}} </p>
   </form>
 </div>

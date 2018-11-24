@@ -21,7 +21,7 @@ export class ImageService {
    }
 
    getImages(): Observable<GalleryImage[]> {
-    return this.db.list('uploads');
+    return this.db.list('uploads').valueChanges();
    }
   getImage(key: string) {
     return firebase.database().ref('uploads/' + key).once('value')
